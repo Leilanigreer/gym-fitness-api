@@ -6,7 +6,7 @@ class RoutinesController < ApplicationController
 
   def create
     @routine = Routine.new(
-      user_id: params[current_user || 1],
+      user_id: current_user.id,
       exercise_id: params[:exercise_id],
       reps: params[:reps]
     )

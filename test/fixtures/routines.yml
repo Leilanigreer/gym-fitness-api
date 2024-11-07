@@ -2,10 +2,10 @@
 
 one:
   user_id: 1
-  exerice_id: 1
+  exercise_id: 1
   reps: 1
 
 two:
   user_id: 1
-  exerice_id: 1
+  exercise_id: 1
   reps: 1

@@ -13,6 +13,9 @@ Rails.application.routes.draw do
 
   post "/sessions" => "sessions#create"
 
+  get "/exercises" => "exercises#index"
+  get "/exercises/:id" => "exercises#show"
+
   # Defines the root path route ("/")
   # root "posts#index"
 end

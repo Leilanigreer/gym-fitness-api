@@ -15,4 +15,17 @@ class RoutinesController < ApplicationController
     @routine.save
     render :show
   end
+
+  def update
+    @routine = Routine.find_by(id: params[:id])
+    if @routine.update(
+      reps: params[:reps] || routine.reps,
+      sets: params[:sets] || routine.sets,
+      day: params[:day] || routine.day,
+    )
+    render :show
+    else
+      render json: { errors: @routine.errors.full_message }, status: :unprocessable_entity
+    end
+  end
 end

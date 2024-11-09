@@ -19,6 +19,7 @@ Rails.application.routes.draw do
 
   get "/routines" => "routines#index"
   post "/routines" => "routines#create"
+  patch "/routines/:id" => "routines#update"
 
 
   # Defines the root path route ("/")

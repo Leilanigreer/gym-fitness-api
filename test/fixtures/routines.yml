@@ -4,8 +4,12 @@ one:
   user_id: 1
   exercise_id: 1
   reps: 1
+  sets: 2
+  day: "Monday"
 
 two:
   user_id: 1
   exercise_id: 1
   reps: 1
+  sets: 3
+  day: "Tuesday"

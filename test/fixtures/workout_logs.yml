@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  routine_id: 1
+  completed: false
+  workout_date: 2024-11-09
+  actual_sets: 1
+  actual_reps: 1
+  notes: MyText
+
+two:
+  routine_id: 1
+  completed: false
+  workout_date: 2024-11-09
+  actual_sets: 1
+  actual_reps: 1
+  notes: MyText

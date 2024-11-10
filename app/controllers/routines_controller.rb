@@ -1,6 +1,6 @@
 class RoutinesController < ApplicationController
   def index
-    @routines = Routine.all
+    @routines = Routine.where(user_id: current_user.id)
     render :index
   end
 

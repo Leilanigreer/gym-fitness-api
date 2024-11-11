@@ -1,5 +1,4 @@
 json.id workout_log.id
-json.routine workout_log.routine
 json.completed workout_log.completed
 json.workout_date workout_log.workout_date
 json.actual_sets workout_log.actual_sets

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_11_09_232204) do
+ActiveRecord::Schema[7.2].define(version: 2024_11_11_203358) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,15 @@ ActiveRecord::Schema[7.2].define(version: 2024_11_09_232204) do
     t.string "video_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "force"
+    t.string "level"
+    t.string "mechanic"
+    t.string "equipment"
+    t.string "category"
+    t.text "instructions", default: [], array: true
+    t.string "primary_muscles", default: [], array: true
+    t.string "secondary_muscles", default: [], array: true
+    t.string "images", default: [], array: true
   end
 
   create_table "routines", force: :cascade do |t|

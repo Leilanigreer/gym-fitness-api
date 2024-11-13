@@ -28,4 +28,9 @@ class RoutinesController < ApplicationController
       render json: { errors: @routine.errors.full_message }, status: :unprocessable_entity
     end
   end
+
+  def show
+    @routine = Routine.find_by(id: params[:id])
+    render :show
+  end
 end

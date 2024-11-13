@@ -17,6 +17,7 @@ class ExercisesController < ApplicationController
         capital_category: exercise.capital_category,
         instructions: exercise.instructions,
         primary_muscles: exercise.primary_muscles,
+        capital_primary_muscles: exercise.capital_primary_muscles,
         secondary_muscles: exercise.secondary_muscles,
         scheduled_days: current_user ?
           exercise.routines

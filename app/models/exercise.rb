@@ -12,4 +12,8 @@ class Exercise < ApplicationRecord
   def capital_equipment
     equipment.capitalize()
   end
+
+  def capital_primary_muscles
+    primary_muscles[0].capitalize()
+  end
 end

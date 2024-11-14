@@ -3,6 +3,17 @@ namespace :exercises do
   desc "Import exercises from exercises.json file"
   task import: :environment do
     puts "Starting exercise import..."
+    puts "Rails Environment: #{Rails.env}"
+    puts "Database Config: #{ActiveRecord::Base.connection_config}"
+
+
+    begin
+      ActiveRecord::Base.connection
+      puts "Database connection successful!"
+    rescue => e
+      puts "Database connection failed: #{e.message}"
+    end
+
 
     # Path to your JSON file
     file_path = Rails.root.join("db", "data", "exercises.json")

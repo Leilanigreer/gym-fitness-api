@@ -8,7 +8,11 @@ json.dates @date_range do |date|
     json.id routine.id
     json.exercise_id routine.exercise.id
     json.exercise_name routine.exercise.name
-    json.exercise routine.exercise
+
+    json.exercise do
+      json.partial! "exercises/exercise", exercise: routine.exercise
+    end
+
     json.reps routine.reps
     json.sets routine.sets
     json.day routine.day

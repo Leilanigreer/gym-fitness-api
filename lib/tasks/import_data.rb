@@ -8,7 +8,7 @@ file_path = File.join(__dir__, "db", "data", "exercises.json")
 json_data = JSON.parse(File.read(file_path))
 
 # Get database connection info from Railway
-db_url = ENV["DATABASE_URL"]
+db_url = ENV["postgresql://postgres:OXSqNUSlRkFYLrBECxtgDpIldpaHynhW@postgres.railway.internal:5432/railway"]
 
 puts "Connecting to database..."
 

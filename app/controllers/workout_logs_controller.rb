@@ -2,10 +2,13 @@ class WorkoutLogsController < ApplicationController
   def index
     end_date = Date.today
     start_date = end_date - 1.month
-    @routines_by_day = Routine.includes(:exercise).group_by(&:day)
+    @routines_by_day = Routine.includes(:exercise)
+                              .where(user_id: current_user.id)
+                              .group_by(&:day)
 
     @existing_logs = WorkoutLog.includes(routine: :exercise)
-                              .all
+                              .joins(:routine)
+                              .where(routine: { user_id: current_user })
                               .group_by(&:workout_date)
 
     @date_range = ((start_date..end_date).to_a + @existing_logs.keys).uniq.sort

@@ -5,7 +5,6 @@ class ExercisesController < ApplicationController
       {
         id: exercise.id,
         name: exercise.name,
-        description: exercise.description,
         images: exercise.images&.map { |image| "/exercises/#{image}" },
         force: exercise.force,
         level: exercise.level,

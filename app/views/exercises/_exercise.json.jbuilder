@@ -1,6 +1,5 @@
 json.id exercise.id
 json.name exercise.name
-json.description exercise.description
 json.images exercise.images&.map { |image| "/images/exercises/#{image}" }
 json.force exercise.force
 json.level exercise.level

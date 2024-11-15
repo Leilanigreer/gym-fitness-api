@@ -12,10 +12,8 @@ class WorkoutLogsController < ApplicationController
   end
 
   def create
-    puts "Received workout_date: #{params[:workout_date]}" # Keeping your debug line
     @workout_log = WorkoutLog.new(workout_log_params)
     if @workout_log.save
-      # Load associated data for the show template
       @workout_log = WorkoutLog.includes(routine: :exercise).find(@workout_log.id)
       render :show
     else
@@ -32,7 +30,6 @@ class WorkoutLogsController < ApplicationController
     end
 
     if @workout_log.update(workout_log_params)
-      # Load associated data for the show template
       @workout_log = WorkoutLog.includes(routine: :exercise).find(@workout_log.id)
       render :show
     else
